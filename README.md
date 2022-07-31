@@ -15,7 +15,7 @@ With the provided information, build a model to predict whether this customer wi
 This data set is [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) from Kaggle. The dataset contains transactions made by credit cards in September 2013 by European cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions.
 
 ### Exploratory Data Analysis
-* Due to security issues, the original features V1, V2, ... V28 have been modified by PCA. However, we can guess that these features could be credit card number, expiration date, CVV, cardholder name, transaction location, transaction date-time, etc.
+* Due to security issues, the original features V1, V2, ... V28 have been modified by PCA. However, we can guess that these features could be credit card number, expiration date, CVV, cardholder name, transaction location, transaction datetime, etc.
 The only two features that have not been converted with PCA are ```Time``` and ```Amount```. Therefore, we only need to focus on processing these two features
 
 ### Data Preprocessing
@@ -33,7 +33,7 @@ The only two features that have not been converted with PCA are ```Time``` and `
 * SOTA model: [TabNet](https://arxiv.org/pdf/1908.07442.pdf)
 
 #### Model Selection
-* The Random Forest model gives the best f1_score results but the training time is long and computationally expensive and TabNet model is overfitting, so for optimization we will choose the **LightGBM** model for fine-tuning. 
+* The Random Forest model gives the best ```f1_score``` results but the training time is long and computationally expensive and TabNet model is overfitting, so for optimization we will choose the **LightGBM** model for fine-tuning. 
 
 <p align='center'>
     <img src='https://github.com/sonnguyen129/Credit-Card-Fraud-Detection/raw/main/docs/model-selection.png'/>
